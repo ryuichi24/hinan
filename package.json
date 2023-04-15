@@ -1,0 +1,64 @@
+{
+  "name": "hinan",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --config vite.config.ts",
+    "cleanup": "rimraf dist release",
+    "dist": "npm run cleanup && npm run build && electron-builder --config electron-builder.config.js --publish always --mac --win --linux",
+    "dist:dev": "npm run cleanup && npm run build && electron-builder --config electron-builder.config.js --publish never --mac --win --linux",
+    "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:staged": "lint-staged --concurrent false",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "prepare": "husky install",
+    "test:dev": "echo 'testing for dev...'",
+    "test:pre-dist": "echo 'testing for pre-dist...'"
+  },
+  "keywords": [],
+  "author": {
+    "email": "ryuichi.nishi24@gmail.com",
+    "name": "ryuichi24",
+    "url": "https://github.com/ryuichi24"
+  },
+  "repository": {
+    "url": "https://github.com/ryuichi24/hinan"
+  },
+  "devDependencies": {
+    "@svgr/rollup": "^6.5.1",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "@vitejs/plugin-react": "^3.0.1",
+    "autoprefixer": "^10.4.13",
+    "electron": "^22.0.3",
+    "electron-builder": "^24.2.1",
+    "electron-devtools-installer": "^3.2.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.3",
+    "rimraf": "^4.1.1",
+    "tailwindcss": "^3.2.6",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vite-plugin-electron": "^0.11.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "immer": "^9.0.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "zustand": "^4.3.7"
+  }
+}

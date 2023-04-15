@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.node.json",
+  "include": [
+    "src/renderer/**/*.tsx",
+    "src/renderer/**/*.ts",
+    "src/main/**/*.ts",
+    "src/preload/**/*.ts",
+    "assets/**/*.tsx",
+    "assets/**/*.ts",
+  ]
+}

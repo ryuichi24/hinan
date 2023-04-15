@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "moduleResolution": "NodeNext",
+    "allowJs": false,
+    "strict": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["./src/renderer/*"],
+      "@icons/*": ["./assets/icons/*"],
+      "@models/*": ["./assets/models/*"]
+    }
+  },
+  "include": ["src/renderer/**/*.tsx", "src/renderer/**/*.ts"]
+}
